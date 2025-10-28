@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO
-from scripts.files import statusFile, tab
+from files import statusFile, tab
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)

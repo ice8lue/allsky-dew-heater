@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO
-from scripts.files import statusFile, tab, weatherFile
+from files import statusFile, tab, weatherFile
 
 # Parse weather file
 with open(weatherFile, "r") as inputfile:

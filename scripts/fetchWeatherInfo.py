@@ -4,7 +4,7 @@ import urllib.request
 import json
 import os
 from dotenv import load_dotenv
-from scripts.files import newline, tab, weatherFile
+from files import newline, tab, weatherFile
 
 load_dotenv()
 
