@@ -1,1 +1,1 @@
-data	0		Dew heater status		OFF
+data	0		Dew heater		OFF

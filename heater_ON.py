@@ -18,6 +18,6 @@ with open(statusFile, "w") as outfile:
     outfile.write(tab)
     outfile.write("0")
     outfile.write(tab)
-    outfile.write("Dew heater status")
+    outfile.write("Dew heater")
     outfile.write(tab)
     outfile.write(status)
