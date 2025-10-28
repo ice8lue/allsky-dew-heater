@@ -1,2 +1,2 @@
-data	0		Temperature Outside		0
+data	0		Ambient Temperature		0
 data	0		Dew Point				0

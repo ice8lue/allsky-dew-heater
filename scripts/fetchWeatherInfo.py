@@ -24,7 +24,7 @@ def fetchWeather():
         outfile.write(tab)
         outfile.write("0")
         outfile.write(tab)
-        outfile.write("Temperature Outside")
+        outfile.write("Ambient Temperature")
         outfile.write(tab)
         outfile.write(str(temp))
         outfile.write(newline)
