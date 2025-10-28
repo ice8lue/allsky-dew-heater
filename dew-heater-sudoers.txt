@@ -1,0 +1,2 @@
+www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/heater_ON.py
+www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/heater_OFF.py
