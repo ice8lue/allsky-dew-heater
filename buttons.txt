@@ -1,2 +1,2 @@
-button	Dew heater turned on	sudo /home/adfr/allsky-dew-heater/heater_ON.py	green	circle-up		Dew Heater ON
-button	Dew heater turned off	sudo /home/adfr/allsky-dew-heater/heater_OFF.py	red		circle-down		Dew Heater OFF
+button	Dew heater turned on	sudo /home/adfr/allsky-dew-heater/scripts/heater_ON.py		green	circle-up		Dew Heater ON
+button	Dew heater turned off	sudo /home/adfr/allsky-dew-heater/scripts/heater_OFF.py		red		circle-down		Dew Heater OFF
