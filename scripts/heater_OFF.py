@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO
+from scripts.files import statusFile, tab
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -9,9 +10,7 @@ GPIO.setup(23, GPIO.OUT)
 GPIO.output(23, GPIO.LOW)
 # GPIO.cleanup()
 
-tab = "\t"
 status = "OFF"
-statusFile = "/home/adfr/allsky-dew-heater/status.txt"
 
 with open(statusFile, "w") as outfile:
     outfile.write("data")

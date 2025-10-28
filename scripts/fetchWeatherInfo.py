@@ -4,7 +4,7 @@ import urllib.request
 import json
 import os
 from dotenv import load_dotenv
-
+from scripts.files import newline, tab, weatherFile
 
 load_dotenv()
 
@@ -17,10 +17,6 @@ temp = data["current"]["temp_c"]
 dewpoint = data["current"]["dewpoint_c"]
 
 # Write output file
-tab = "\t"
-newline = "\n"
-weatherFile = "/home/adfr/allsky-dew-heater/weather.txt"
-
 with open(weatherFile, "w") as outfile:
     outfile.write("data")
     outfile.write(tab)

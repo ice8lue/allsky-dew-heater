@@ -1,3 +1,5 @@
 # Permissions for allsky-dew-heater scripts
 www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/scripts/heater_ON.py
 www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/scripts/heater_OFF.py
+www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/scripts/heater_TOGGLE.py
+www-data ALL=(ALL) NOPASSWD:/home/adfr/allsky-dew-heater/scripts/fetchWeatherInfo.py
