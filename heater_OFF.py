@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(23, GPIO.OUT)
-print("Heater OFF")
+# print("Heater OFF")
 GPIO.output(23, GPIO.LOW)
 # GPIO.cleanup()
 
