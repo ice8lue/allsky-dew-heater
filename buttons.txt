@@ -1,2 +1,2 @@
-button  Dew heater turned on    /home/adfr/allsky-dew-heater/heater_ON.py      green   circle-up       Heater ON
-button  Dew heater turned off   /home/adfr/allsky-dew-heater/heater_OFF.py     red     circle-down     Heater OFF
+button	Dew heater turned on	/home/adfr/allsky-dew-heater/heater_ON.py	green	circle-up		Heater ON
+button	Dew heater turned off	/home/adfr/allsky-dew-heater/heater_OFF.py	red		circle-down		Heater OFF
