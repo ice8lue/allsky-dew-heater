@@ -28,7 +28,7 @@ with open(weatherFile, "w") as outfile:
     outfile.write(tab)
     outfile.write("Temperature Outside")
     outfile.write(tab)
-    outfile.write(temp)
+    outfile.write(str(temp))
     outfile.write(newline)
 
     outfile.write("data")
@@ -37,4 +37,4 @@ with open(weatherFile, "w") as outfile:
     outfile.write(tab)
     outfile.write("Dew Point")
     outfile.write(tab)
-    outfile.write(dewpoint)
+    outfile.write(str(dewpoint))
