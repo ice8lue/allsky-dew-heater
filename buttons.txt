@@ -1,5 +1,3 @@
 button	Dew heater turned on				sudo /home/adfr/allsky-dew-heater/scripts/heater_ON.py			green		circle-up		Dew Heater ON
-button	Dew heater turned to automatic		sudo /home/adfr/allsky-dew-heater/scripts/heater_TOGGLE.py		yellow		circle-right	Dew Heater AUTO
+button	Dew heater turned to automatic		sudo /home/adfr/allsky-dew-heater/scripts/heater_AUTO.py		yellow		circle-right	Dew Heater AUTO
 button	Dew heater turned off				sudo /home/adfr/allsky-dew-heater/scripts/heater_OFF.py			red			circle-down		Dew Heater OFF
-
-button	Weather Info updated				sudo /home/adfr/allsky-dew-heater/scripts/fetchWeatherInfo.py	blue		cloud			Update Weather

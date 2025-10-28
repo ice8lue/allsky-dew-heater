@@ -8,29 +8,33 @@ from files import newline, tab, weatherFile
 
 load_dotenv()
 
-apiUrl = f"https://api.weatherapi.com/v1/current.json?key={os.getenv('WEATHER_API_KEY')}&q={os.getenv('LOCATION')}&aqi=no"
 
-with urllib.request.urlopen(apiUrl) as url:
-    data = json.loads(url.read().decode())
+def fetchWeather():
+    apiUrl = f"https://api.weatherapi.com/v1/current.json?key={os.getenv('WEATHER_API_KEY')}&q={os.getenv('LOCATION')}&aqi=no"
 
-temp = data["current"]["temp_c"]
-dewpoint = data["current"]["dewpoint_c"]
+    with urllib.request.urlopen(apiUrl) as url:
+        data = json.loads(url.read().decode())
 
-# Write output file
-with open(weatherFile, "w") as outfile:
-    outfile.write("data")
-    outfile.write(tab)
-    outfile.write("0")
-    outfile.write(tab)
-    outfile.write("Temperature Outside")
-    outfile.write(tab)
-    outfile.write(str(temp))
-    outfile.write(newline)
+    temp = data["current"]["temp_c"]
+    dewpoint = data["current"]["dewpoint_c"]
 
-    outfile.write("data")
-    outfile.write(tab)
-    outfile.write("0")
-    outfile.write(tab)
-    outfile.write("Dew Point")
-    outfile.write(tab)
-    outfile.write(str(dewpoint))
+    # Write output file
+    with open(weatherFile, "w") as outfile:
+        outfile.write("data")
+        outfile.write(tab)
+        outfile.write("0")
+        outfile.write(tab)
+        outfile.write("Temperature Outside")
+        outfile.write(tab)
+        outfile.write(str(temp))
+        outfile.write(newline)
+
+        outfile.write("data")
+        outfile.write(tab)
+        outfile.write("0")
+        outfile.write(tab)
+        outfile.write("Dew Point")
+        outfile.write(tab)
+        outfile.write(str(dewpoint))
+
+    return [temp, dewpoint]

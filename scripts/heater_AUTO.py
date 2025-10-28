@@ -1,14 +1,13 @@
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO
-from files import statusFile, tab, weatherFile
+from files import statusFile, tab
+from fetchWeatherInfo import fetchWeather
 
-# Parse weather file
-with open(weatherFile, "r") as inputfile:
-    lines = inputfile.readlines()
-
-    temp = float(lines[0].split("\t")[-1].replace("\n", ""))
-    dew = float(lines[1].split("\t")[-1].replace("\n", ""))
+# Update weather info
+weather = fetchWeather()
+temp = weather[0]
+dew = weather[1]
 
 # GPIO Setup
 GPIO.setmode(GPIO.BCM)
