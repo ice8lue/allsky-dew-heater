@@ -10,4 +10,4 @@ chmod g+x ./heater_OFF.py
 chmod g+w ./status.txt
 chgrp www-data ./status.txt
 
-sudo  cp  ./dew-heater-sudoers.txt  /etc/sudoers.d
+sudo  cp  ./dew-heater-sudoers  /etc/sudoers.d
