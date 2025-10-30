@@ -15,8 +15,12 @@ url = 'https://api.adfr.io/files/61badcf5-3a08-4ecb-9ca2-cebf4cdd5288'
 images = glob.glob(latestImageFile)
 for imageFile in images:
     with open(imageFile, 'rb') as img:
-        name_img= os.path.basename(imageFile)
-        files= {'file': ( name_img, img, 'Content-Type': 'image/jpeg', 'Content-Length': 1 )}
+        filename = os.path.basename(imageFile)
+        files = {
+            'file': (filename, img),
+            'Content-Type': 'image/jpeg',
+            'Content-Length': 1
+        }
 
         requests.patch(
             url, 
