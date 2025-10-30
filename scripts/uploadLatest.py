@@ -14,7 +14,7 @@ images = glob.glob(latestImageFile)
 for imageFile in images:
     with open(imageFile, 'rb') as img:
         name_img= os.path.basename(imageFile)
-        files= {'image': (name_img,img,'multipart/form-data',{'Expires': '0'}) }
+        files= {'file': (name_img, img, 'multipart/form-data', {'Expires': '0'})}
 
         requests.patch(
             url, 
