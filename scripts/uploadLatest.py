@@ -16,8 +16,10 @@ images = glob.glob(latestImageFile)
 for imageFile in images:
     with open(imageFile, 'rb') as img:
         filename = os.path.basename(imageFile)
+        imageData = img.read()
+
         files = {
-            'file': (filename, img)
+            'file': (filename, imageData, 'image/jpeg')
         }
 
         requests.patch(
