@@ -17,9 +17,7 @@ for imageFile in images:
     with open(imageFile, 'rb') as img:
         filename = os.path.basename(imageFile)
         files = {
-            'file': (filename, img),
-            'Content-Type': 'image/jpeg',
-            'Content-Length': 1
+            'file': (filename, img)
         }
 
         requests.patch(
