@@ -40,7 +40,7 @@ allowActivationAfterMs = 3600000  # 1 hour
 
 def mustCoolDown():
     try:
-        with open(heaterLogFile, "r") as logFile:
+        with open(heaterLastActiveFile, "r") as logFile:
             lastActivatedStr = logFile.readline().strip()
             if lastActivatedStr:
                 lastActivated = int(lastActivatedStr)
@@ -54,7 +54,7 @@ def mustCoolDown():
 
 def canActivate():
     try:
-        with open(heaterLogFile, "r") as logFile:
+        with open(heaterLastActiveFile, "r") as logFile:
             lastActivatedStr = logFile.readline().strip()
             if lastActivatedStr:
                 lastActivated = int(lastActivatedStr)
