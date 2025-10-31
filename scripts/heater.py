@@ -18,7 +18,7 @@ def logStatus(status):
         outfile.write(status)
 
     with open(heaterLogFile, "a") as logFile:
-        logFile.write(f"${datetime.now().time()}: Heater turned {status}\n")
+        logFile.write(f"{datetime.now().time()}: Heater turned {status}\n")
 
     if status == "ON":
         with open(heaterLastActiveFile, "w") as logFile:
