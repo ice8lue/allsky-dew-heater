@@ -19,6 +19,9 @@ if temp <= (dew + 10) and canActivate():
     print("Dew heater turned ON")
 
 # Heater should turn OFF if it has been ON for more than 15 minutes
-elif mustCoolDown():
+# or temperature is more than 10 degrees above dew point.
+elif mustCoolDown() or temp > (dew + 10):
     turnOff()
     print("Dew heater turned OFF")
+
+# Otherwise, keeo heater state unchanged
