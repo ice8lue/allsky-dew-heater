@@ -7,6 +7,9 @@ from datetime import datetime
 
 from heater import canActivate, mustCoolDown, turnOff, turnOn
 
+with open(heaterLogFile, "a") as logFile:
+    logFile.write(f"{datetime.now().time()}: Heater mode set to AUTO\n")
+
 # Update weather info
 weather = fetchWeather()
 temp = weather[0]
