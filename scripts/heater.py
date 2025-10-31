@@ -46,9 +46,6 @@ def mustCoolDown():
                 lastActivated = int(lastActivatedStr)
                 now = int(datetime.now().timestamp() * 1000)
                 diff = now - lastActivated
-
-                print(f"Time since last activation: {diff} ms")
-
                 if diff >= cooldownAfterMs and diff < allowActivationAfterMs:
                     return True
     except FileNotFoundError:
