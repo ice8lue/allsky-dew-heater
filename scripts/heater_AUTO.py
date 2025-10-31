@@ -12,18 +12,13 @@ weather = fetchWeather()
 temp = weather[0]
 dew = weather[1]
 
-# Heater should turn on if ambient temperatur is below dew point (with a 10C threshold),
-# and if it is allowed to activate (not in cooldown, and enough time since last activation)
-if temp <= (dew + 10) and not mustCoolDown() and canActivate():
-    turnOn()
-    print("Dew heater turned ON")
-else:
-    turnOff()
-
-
+# Heater should turn ON if temperature is within 10 degrees of dew point
+# and last activation was more than an hour ago.
 if temp <= (dew + 10) and canActivate():
     turnOn()
     print("Dew heater turned ON")
+
+# Heater should turn OFF if it has been ON for more than 15 minutes
 elif mustCoolDown():
     turnOff()
     print("Dew heater turned OFF")
