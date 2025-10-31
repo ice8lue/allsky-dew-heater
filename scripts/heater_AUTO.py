@@ -5,7 +5,7 @@ from files import heaterLogFile, statusFile, tab
 from fetchWeatherInfo import fetchWeather
 from datetime import datetime
 
-from scripts.heater import canActivate, mustCoolDown, turnOff, turnOn
+from heater import canActivate, mustCoolDown, turnOff, turnOn
 
 # Update weather info
 weather = fetchWeather()
