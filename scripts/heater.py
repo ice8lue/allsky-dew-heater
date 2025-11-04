@@ -35,7 +35,7 @@ def turnOff():
     GPIO.output(23, GPIO.LOW)
     logStatus("OFF")
 
-cooldownAfterMs = 900000  # 15 minutes
+cooldownAfterMs = 600000  # 10 minutes
 allowActivationAfterMs = 3600000  # 1 hour
 
 def mustCoolDown():
