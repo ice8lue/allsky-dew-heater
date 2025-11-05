@@ -25,6 +25,14 @@ def logStatus(status):
             now = int(datetime.now().timestamp() * 1000)
             logFile.write(str(now))
 
+def getStatus():
+    setup()
+    state = GPIO.input(23)
+    if state == GPIO.HIGH:
+        return "ON"
+    else:
+        return "OFF"
+
 def turnOn():
     setup()
     GPIO.output(23, GPIO.HIGH)
@@ -39,6 +47,9 @@ cooldownAfterMs = 600000  # 10 minutes
 allowActivationAfterMs = 3600000  # 1 hour
 
 def mustCoolDown():
+    if getStatus() == "OFF":
+        return False
+
     try:
         with open(heaterLastActiveFile, "r") as logFile:
             lastActivatedStr = logFile.readline().strip()
@@ -53,6 +64,9 @@ def mustCoolDown():
     return False
 
 def canActivate():
+    if getStatus() == "ON":
+        return False
+
     try:
         with open(heaterLastActiveFile, "r") as logFile:
             lastActivatedStr = logFile.readline().strip()
